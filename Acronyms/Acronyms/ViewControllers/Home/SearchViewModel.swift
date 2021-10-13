@@ -35,7 +35,7 @@ final class SearchViewModel {
     
     func performSearch() {
         
-        // Cancel the searching item
+        // Cancel the searching item to avoid throttling of search bar
         searchingWorkItem?.cancel()
         
         // Define our searching item to do the search

@@ -9,15 +9,20 @@ import UIKit
 
 class SearchViewController: UIViewController, AlertsPresenter {
     
-    var listData: [AcronymDetails] = []
+    // Outlets
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: Private Properties
     private var viewModel: SearchViewModel?
+    private var listData: [AcronymDetails] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Make sure to hide unwanted table cells
         tableView.tableFooterView = UIView()
+        
+        // Make sure done button of search bar should not in enable state initially
         searchBar.enablesReturnKeyAutomatically = true
     }
     
@@ -114,6 +119,7 @@ extension SearchViewController: searchViewProtocol {
     
     func showError(error: ServerResponseError) {
         DispatchQueue.main.async {
+            // Show alert on main thread
             self.showAlert(message: error.description)
         }
     }

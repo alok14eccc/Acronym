@@ -28,10 +28,13 @@ class SearchServiceGateway: SearchService {
                 
                 switch result {
                     case .success(let data):
+                        // Check for the data if it is of the required type
                         guard let acronymModel = data as? [Acronym] else {
-                           completion(.failure(.coding))
+                           completion(.failure(.coding)) // Need to handle in better way
                             return
                         }
+                        
+                        // Send back only list of Acronyms
                         completion(.success(acronymModel.first?.lfs ?? []))
                     case .failure(let error):
                         completion(.failure(error))
@@ -41,7 +44,7 @@ class SearchServiceGateway: SearchService {
     }
 }
 
-// Keep Constants
+// Keep Constants here
 fileprivate struct SearchServiceGatewayConstants {
     static let searchURL = "http://www.nactem.ac.uk/software/acromine/dictionary.py?sf="
 }
