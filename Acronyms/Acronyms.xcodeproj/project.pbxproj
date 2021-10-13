@@ -113,8 +113,8 @@
 		AAB47FD42714550F003849FB = {
 			isa = PBXGroup;
 			children = (
-				AA6D64AA2715CDAB007E8D96 /* Helpers */,
 				AAB47FDF2714550F003849FB /* Acronyms */,
+				AA6D64AA2715CDAB007E8D96 /* Helpers */,
 				AAB47FF627145512003849FB /* AcronymsTests */,
 				AAB4800127145513003849FB /* AcronymsUITests */,
 				AAB47FDE2714550F003849FB /* Products */,
@@ -134,10 +134,10 @@
 		AAB47FDF2714550F003849FB /* Acronyms */ = {
 			isa = PBXGroup;
 			children = (
+				AAB48019271455E6003849FB /* App */,
+				AAB4801A2714560A003849FB /* ViewControllers */,
 				AA65A5A52715794A00086C3E /* Models */,
 				AAB4801B2714565A003849FB /* RemoteGateways */,
-				AAB4801A2714560A003849FB /* ViewControllers */,
-				AAB48019271455E6003849FB /* App */,
 				AAB47FE927145512003849FB /* Assets.xcassets */,
 				AAB47FEB27145512003849FB /* LaunchScreen.storyboard */,
 				AAB47FEE27145512003849FB /* Info.plist */,
